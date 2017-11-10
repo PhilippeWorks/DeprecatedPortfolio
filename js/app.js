@@ -97,8 +97,9 @@ class navButton {
 					element.page.css("display", "none");
 				})	
 				//shows requested page
-				this.page.fadeIn(400);
 				this.page.css("display", "flex");
+				this.page.fadeIn(400);
+				
 				
 			}, 500)
 			}
