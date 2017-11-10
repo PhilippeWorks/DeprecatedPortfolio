@@ -1,0 +1,200 @@
+@import 'mixins+variables.scss';
+
+@media all and (max-width: 600px), all and (max-device-width: 500px) {
+
+	body {
+		max-height: none;
+		width: 100%;
+	}
+
+	header {
+		position:fixed;
+		top: 0;
+		z-index: 2;
+		width: 100%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.5);
+
+		#top-half-header {
+			@include flex-wrap(wrap);
+			padding: 1%;
+
+			#header-tags-grouping {
+				font-size: 1em;
+				width: 100%;
+				margin-left: 0;
+
+				#title {
+					text-align: center;
+					margin-top: 0;
+					padding-top: 3px;
+				}
+
+				#subtitle {
+					@extend #title;
+					margin-bottom: 0;
+					padding-bottom: 3px;
+				}
+			}
+
+			#github-link {
+				display: none;
+			}
+
+			#linkedin-link {
+				@extend #github-link;
+			}
+		}
+
+		.media-buttons {
+		}
+	}
+
+	#jumbotron {
+		height: auto;
+		padding: 1%;
+
+		#left-arrow {
+			display: none;
+		}
+
+		#right-arrow {
+			display: none;
+		}
+
+		#portfolio-slide {
+			margin: 1em;
+			max-height: none;
+			@include flex-basis(100%);
+
+			#portfolio-slide-title {
+				@include border(white);
+				padding: 1%;
+			}
+
+			#portfolio-img {
+				width: 100%;
+				margin-bottom: 0.5%;
+
+				&:hover {
+					opacity:1;
+				}
+			}
+
+			#overlay-container {
+				//for firefox
+				display: contents;
+				//for edge
+				display: inline-table;
+			}
+
+			#overlay {
+				padding: 0.5em;
+				position: static;
+				top: auto;
+				left: auto;
+				opacity: 1;
+
+				&:hover {
+					background: none;
+					opacity: 1;
+				}
+
+				#project-description {
+					padding: 1em;
+					margin-top: 0.5em;
+				}
+
+				.overlay-buttons {
+					padding: 0.25em;
+				}
+			}
+		}
+	}
+
+	#about {
+		height: auto;
+		#about-img-grouping {
+			@include flex(column);
+
+			#about-me-pic {
+				max-width: 200px;
+				align-self: center;
+				margin: 1.5em;
+			}
+
+			p {
+				padding: 1% 0 1% 0;
+			}
+		}
+	}
+
+	#contact-page {
+		padding: 1%;
+		height: 500px;
+		form {
+			@include flex-basis(90%);
+			width: 100%;
+
+			label {
+			}
+
+			input {
+				margin: 1%;
+			}
+
+			textarea {
+				margin: 1%;
+			}
+
+			#form-msg {
+				label {
+				vertical-align: top;
+				}
+			}
+		}
+	}
+
+	footer {
+		border-top-style: dashed;
+		position:fixed;
+		bottom: 0;
+		z-index: 2;
+		width: 100%;
+		height: auto;
+		padding: 1%;
+
+		#name-tag {
+			display: none;
+		}
+
+		#footer-info {
+			//for edge
+			justify-content: space-around;
+
+			.res-info {
+				color: $metallic-seaweed;
+			}
+
+			div {
+				@include responsive-font(1.5vw, 14px, 24px, $fallback: false);
+				@include flex(row);
+				text-decoration: none;
+
+				a {
+					color: $metallic-seaweed;
+					padding: 0 9px 0 9px;
+				}
+			}
+		}
+
+		.footer-notes {
+			@include responsive-font(1.5vw, 14px, 24px, $fallback: false);
+
+		}
+
+		#footer-city {
+			display: none;
+		}
+	}
+}

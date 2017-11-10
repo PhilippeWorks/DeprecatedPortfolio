@@ -1,0 +1,332 @@
+@import 'mixins+variables.scss';
+* {
+	margin:0;
+	max-width: 1280px;
+	box-sizing: border-box;
+	background-image: url(project_papper.png);
+	color: $gun-metal;
+	// @include border(black);
+	font-family: 'Righteous', cursive;
+}
+
+html {
+	margin: 0 auto;
+}
+
+body {
+	height: 100vh;
+	//ensures consistent experience
+	max-height: 975px;
+}
+
+
+header {
+	@include flex(column);
+	height: 15%;
+
+	#top-half-header {
+		@include flex(row);
+		@include justify-content(flex-end);
+		align-content: center;
+
+		#header-tags-grouping {
+			@include flex(column);
+			margin-right: auto;
+			margin-left: 2%;
+		}
+
+		#github-link {
+			@include clicking();
+			@include responsive-font(1vw, 16px, 25px, $fallback: false);
+			@include align-self(center);
+			text-decoration: none;
+			height: fit-content;
+			margin-right: 2%;
+			color: $tiffany-blue
+		}
+
+		#linkedin-link {
+			@extend #github-link;
+		}
+
+		.fa {
+			@include responsive-font(2vw, 16px, 25px, $fallback: false);
+			color: inherit;
+		}
+	}
+
+	.header-tags {
+		text-align: left;
+	}
+
+	#title {
+		@include responsive-font(2.5vw, 17px, 32px, $fallback: false);
+		padding-top: 1.5vh;
+		color: $metallic-seaweed;
+	}
+
+	#subtitle {
+		@include responsive-font(2vw, 13px, 24px , $fallback: false);
+		padding-top: 1vh;
+		padding-bottom: 2vh;
+		color: $cambridge-blue;
+	}
+
+	.media-buttons {
+		@include flex(row);
+		@include justify-content(center);
+		@include border(white);
+		padding-right: 7%;
+		padding-left: 7%;
+		background: rgba(255, 255, 255, 0.7);
+
+		.b2-portfolio {
+		@include clicking();
+		@include responsive-font(1.7vw, 14px, 20px, $fallback: false);
+		background: rgba(255, 255, 255, 0);
+		border: none;
+		}
+
+		#about-button {
+			@extend .b2-portfolio;
+			margin-left: 2%;
+		}
+
+		#contact-link {
+			@extend .b2-portfolio;
+			margin-left: 2%;
+
+			a {
+				@extend .b2-portfolio;
+				text-decoration: none;
+				background: rgba(255, 255, 255, 0);
+			}
+		}
+	}
+}
+
+#content {
+	height: 75%;
+	margin: 0 auto;
+}
+
+#jumbotron {
+	@include flex(row);
+	@include vert-align(center);
+	@include justify-content(center);
+	@include flex-wrap(wrap);
+	height: 100%;
+	padding: 5% 2% 5% 2%;
+
+		#portfolio-slide {
+			@include flex(column);
+			@include flex-basis(85%);
+			@include justify-content(center);
+			position: relative;
+			max-height: 100%;
+			overflow: hidden;
+			margin-bottom: 1%;
+
+ 			#portfolio-slide-title {
+
+				@include responsive-font(2vw, 14px, 22px, $fallback: false);
+				color: $tiffany-blue;
+				text-align: center;
+				padding: 1%;
+			}
+
+			#overlay-container {
+				position: inherit;
+				max-height: 600px;
+			}
+
+			#portfolio-img {
+				@include flex(row);
+				@include border(white);
+				// @include flex-basis(75%);
+				width: 100%;
+				max-height: 600px;
+				transition: .5s ease;
+
+				&:hover {
+					opacity: 0.3;
+				}
+			}	
+
+			#overlay {
+				@include flex(column);
+				@include justify-content(center);
+				@include vert-align(center);
+				@include border(white);
+				transition: .5s ease;
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    width:100%;
+			    height: 100%;
+			    opacity: 0;
+			    background: rgba(255, 255, 255, 0);
+
+			    &:hover {
+				    background: rgba(255, 255, 255, 0.7);
+				    opacity: 1;
+			    }
+
+    	 		.overlay-buttons {
+					@extend #portfolio-slide-title;
+					@include clicking();
+					@include border(white);
+					@include responsive-font(2vw, 13px, 18px, $fallback: false);
+					background: rgba(255, 255, 255, 0.7);
+					height: fit-content;
+					width: fit-content;
+					margin-bottom: 4px;
+					padding: 0.7%;
+					text-decoration: none;
+				}
+
+				#project-description {
+					@include responsive-font(2vw, 13px, 18px, $fallback: false);
+					@include border(white);
+					background: rgba(255, 255, 255, 0.7);
+					height: fit-content;
+					width: fit-content;
+					margin-bottom: 2%;
+					max-width: 80%;
+					padding: 1%;
+				}	 			    								  
+			}
+		}
+
+
+		#left-arrow {
+			@include clicking();
+			height: fit-content;
+ 			font-size: 5vh;
+			border: none;
+			margin-right: auto; 
+			}
+
+		#right-arrow {
+			@extend #left-arrow;
+			margin-left: auto;
+			margin-right: 0;
+		}
+}
+
+#contact-page {
+	@include justify-content(center);
+	@include flex-direction(column);
+	display: none;
+	height: 100%;
+
+	form {
+		@include box-shadow(0, 0, 1em, 0, white)
+		@include border(white);
+		@include flex-basis(60%);
+		@include responsive-font(2vw, 12px, 24px, $fallback: false);
+		width: 70%;
+		text-align: right;
+		padding: 2%;
+		margin: 5% auto auto auto;
+
+		label {
+			width: 20%;
+		}
+
+		input {
+			width: 80%;
+			margin-left: 4%;
+		}
+
+		textarea {
+			height: 100%;
+			width: 80%;
+			margin-left: 4%;
+		}
+
+		#form-button {
+			@include clicking();
+			@include responsive-font(2vw, 12px, 20px, $fallback: false);
+		}
+
+		#form-name, #form-email {
+			@include responsive-font(2vw, 12px, 20px, $fallback: false);
+			padding: 1%;
+			height: 10%
+		}
+
+		#form-msg {
+			@include responsive-font(2vw, 12px, 20px, $fallback: false);
+			height: 70%;
+			width: 100%;
+			padding: 3% 1% 4% 1%;
+
+			label {
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+#about {
+	@extend #contact-page;
+	@include responsive-font(2vw, 13px, 22px, $fallback: false);
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom:10%;
+
+	#about-img-grouping {
+		@include flex(row);
+		@include justify-content(space-evenly);
+		margin-top: 2%;
+		margin-bottom: 2%;
+
+		#about-me-pic {
+			@include align-self(center);
+			@include border(white);
+			width: 100%;
+			max-width: 300px;
+			max-height: 57vh;
+		}
+
+		p {
+			padding: 5%;
+		}
+
+	}
+
+}
+
+footer {
+	@include flex(row);
+	@include flex-wrap(wrap);
+	height: 10%;
+	border-top: 3px double white;
+
+	#footer-info {
+		@include flex(row);
+		@include align-self(center);
+		@include justify-content(space-around);
+		@include flex-basis(100%);
+
+		div {
+			display:none;
+		}
+	}
+
+	#footer-media-group {
+		display: none;
+	}
+
+	#name-tag {
+		@include align-self(flex-end);
+		margin-left: auto;
+
+		color: $metallic-seaweed;
+	}
+
+	.footer-notes {
+		color: $tiffany-blue;
+	}
+}

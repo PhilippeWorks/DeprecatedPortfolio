@@ -1,0 +1,22 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "enquire.js": "^2.1.6",
+    "grunt-contrib-imagemin": "^2.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "imagemin-optipng": "^5.2.1",
+    "nodemailer": "^4.3.1",
+    "normalize.css": "^7.0.0"
+  }
+}
