@@ -87,7 +87,7 @@ class navButton {
 			navBar.forEach( (element) => {
 
 				if (element.button != this.button || this.page.css("display") != "flex") {
-					element.page.fadeOut(400);
+					element.page.fadeOut(100);
 				}
 			})
 
@@ -101,7 +101,7 @@ class navButton {
 				this.page.fadeIn(400);
 				
 				
-			}, 600)
+			}, 400)
 			}
 		});
 
