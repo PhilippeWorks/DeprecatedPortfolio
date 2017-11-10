@@ -4,28 +4,28 @@ let projects = [
 		title: "Arcade Game Demo",
 		src: "imgs/arcadegame.png",
 		description: "A simple 1 level demo inspired by frogger. Made with the HTML5 canvas API.",
-		url:"https://philippeworks.github.io/projects/arcade-game/index.html",
+		url:"projects/arcade-game/index.html",
 		srcUrl: "https://github.com/PhilippeWorks/Arcade-Game-Demo"
 	},
 	{
 		title: "Neighborhood Directory",
 		src: "imgs/neighborhood.png",
 		description: "Checkout this business directory for a village named Everett. Made with vanilla javascript, the Google Maps API and Open Weather API.",
-		url:"https://philippeworks.github.io/projects/neighborhood-directory/index.html",
+		url:"projects/neighborhood-directory/index.html",
 		srcUrl: "https://github.com/PhilippeWorks/Neighborhood-Directory"
 	},
 	{
 		title: "Random-Quote Generator",
 		src: "imgs/quote-machine.png",
 		description: "Share these cool quotes on social media. Using the facebook and twitter API for share buttons.",
-		url:"https://philippeworks.github.io/projects/random-quote-generator/index.html",
+		url:"projects/random-quote-generator/index.html",
 		srcUrl: "https://github.com/PhilippeWorks/Quote-Machine"
 	},
 	{
 		title: "Online Resume",
 		src: "imgs/onlineresume.png",
 		description: "Have a look at the online version of my resume. jQuery is at the core of this project.",
-		url:"https://philippeworks.github.io/projects/online-resume/index.html",
+		url:"projects/online-resume/index.html",
 		srcUrl: "https://github.com/PhilippeWorks/Online-Resume"
 	}
 ];
