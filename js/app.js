@@ -100,7 +100,7 @@ class navButton {
 				this.page.fadeIn(400);
 				this.page.css("display", "flex");
 				
-			}, 40)
+			}, 500)
 			}
 		});
 
