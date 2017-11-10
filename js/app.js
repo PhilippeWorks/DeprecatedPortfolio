@@ -101,7 +101,7 @@ class navButton {
 				this.page.fadeIn(400);
 				
 				
-			}, 500)
+			}, 600)
 			}
 		});
 
