@@ -88,25 +88,30 @@ class navButton {
 
 				if (element.button != this.button || this.page.css("display") != "flex") {
 					element.page.fadeOut(400);
-										
-				}
-			})
+					window.setTimeout( () => {
+						//prevents loading of multiple pages on repeated fast clicks
+							navBar.forEach( (element) => {
+							element.page.css("display", "none");
+						})
+					}, 400);					
+				};
+			});
 
 			window.setTimeout( () => {
 				//prevents loading of multiple pages on repeated fast clicks
 					navBar.forEach( (element) => {
-					element.page.css("display", "none");
-				})
-			}, 400)
+						element.page.css("display", "none");
+					});
+			}, 400);
 
 			//shows requested page
 			this.page.css("display", "flex");
 			this.page.fadeIn(400);
-			}
+			};
 		});
 
 		navBar.push(this);
-	}
+	};
 };
 
 // new navButton($("#contact-link"), $("#contact-page"));
