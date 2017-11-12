@@ -55,8 +55,8 @@ $("#right-arrow").click( () => {
 			slideMaker(counter);
 		}
 	});
+	//gives space for fadeout to finish before generating next slide
 	window.setTimeout(() => {$("#portfolio-slide").fadeIn(400);}, 400);
-	
 });
 
 //left arrow button
@@ -70,8 +70,8 @@ $("#left-arrow").click( () => {
 			slideMaker(counter);
 		}
 	});
+	//gives space for fadeout to finish before generating next slide
 	window.setTimeout(() => {$("#portfolio-slide").fadeIn(400);}, 400);
-	
 });
 
 //nav bar controls
