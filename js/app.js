@@ -97,13 +97,6 @@ class navButton {
 				};
 			});
 
-			window.setTimeout( () => {
-				//prevents loading of multiple pages on repeated fast clicks
-					navBar.forEach( (element) => {
-						element.page.css("display", "none");
-					});
-			}, 400);
-
 			//shows requested page
 			this.page.css("display", "flex");
 			this.page.fadeIn(400);
