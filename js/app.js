@@ -55,6 +55,7 @@ $("#right-arrow").click( () => {
 			slideMaker(counter);
 		}
 	});
+	window.setTimeout(() => {console.log("yo")}, 400);
 	$("#portfolio-slide").fadeIn(400);
 });
 
@@ -69,6 +70,7 @@ $("#left-arrow").click( () => {
 			slideMaker(counter);
 		}
 	});
+	window.setTimeout(() => {console.log("yo")}, 400);
 	$("#portfolio-slide").fadeIn(400);
 });
 
@@ -85,21 +87,20 @@ class navButton {
 			//to prevent redundant animation
 			if(this.page.css("display") != "flex") {
 			navBar.forEach( (element) => {
-
 				if (element.button != this.button || this.page.css("display") != "flex") {
-					element.page.fadeOut(400);
-					window.setTimeout( () => {
-						//prevents loading of multiple pages on repeated fast clicks
-							navBar.forEach( (element) => {
-							element.page.css("display", "none");
-						})
-					}, 400);					
+					element.page.fadeOut(400);				
 				};
 			});
 
-			//shows requested page
-			this.page.css("display", "flex");
-			this.page.fadeIn(400);
+				window.setTimeout( () => {
+					//prevents loading of multiple pages on repeated fast clicks
+					navBar.forEach( (element) => {
+					element.page.css("display", "none");
+					});
+					//shows requested page
+					this.page.css("display", "flex");
+					this.page.fadeIn(400);	
+				}, 400);
 			};
 		});
 
