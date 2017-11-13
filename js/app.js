@@ -47,6 +47,7 @@ slideMaker(counter);
 //right arrow button
 $("#right-arrow").click( () => {
 	$("#portfolio-slide").fadeOut(400);
+	window.setTimeout( () => {
 		counter++;	
 		if (counter < projects.length) {
 			slideMaker(counter);
@@ -54,22 +55,26 @@ $("#right-arrow").click( () => {
 			counter = 0;
 			slideMaker(counter);
 		}
+	}, 400);
 	//gives space for fadeout to finish before generating next slide
-	window.setTimeout(() => {$("#portfolio-slide").fadeIn(400);}, 400);
+	window.setTimeout( () => {$("#portfolio-slide").fadeIn(400);}, 500);
 });
 
 //left arrow button
 $("#left-arrow").click( () => {
 	$("#portfolio-slide").fadeOut(400);
-		counter++;	
+	window.setTimeout( () => {
+		counter--;	
 		if (counter < projects.length) {
 			slideMaker(counter);
 		} else if (counter === projects.length) {
 			counter = 0;
 			slideMaker(counter);
 		}
+	}, 400);
+
 	//gives space for fadeout to finish before generating next slide
-	window.setTimeout(() => {$("#portfolio-slide").fadeIn(400);}, 400);
+	window.setTimeout( () => {$("#portfolio-slide").fadeIn(400);}, 500);
 });
 
 //nav bar controls
