@@ -46,7 +46,7 @@ slideMaker(counter);
 
 //right arrow button
 $("#right-arrow").click( () => {
-	$("#portfolio-slide").fadeOut(400, () => {
+	$("#portfolio-slide").fadeOut(400);
 		counter++;	
 		if (counter < projects.length) {
 			slideMaker(counter);
@@ -54,22 +54,20 @@ $("#right-arrow").click( () => {
 			counter = 0;
 			slideMaker(counter);
 		}
-	});
 	//gives space for fadeout to finish before generating next slide
 	window.setTimeout(() => {$("#portfolio-slide").fadeIn(400);}, 400);
 });
 
 //left arrow button
 $("#left-arrow").click( () => {
-	$("#portfolio-slide").fadeOut(400, () => {
-		counter--;
-		if (counter >= 0) { 
+	$("#portfolio-slide").fadeOut(400);
+		counter++;	
+		if (counter < projects.length) {
 			slideMaker(counter);
-		} else if (counter < 0) {
-			counter = projects.length-1;
+		} else if (counter === projects.length) {
+			counter = 0;
 			slideMaker(counter);
 		}
-	});
 	//gives space for fadeout to finish before generating next slide
 	window.setTimeout(() => {$("#portfolio-slide").fadeIn(400);}, 400);
 });
