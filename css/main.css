@@ -252,7 +252,7 @@ header {
         cursor: pointer;
         border: 2px solid white;
         border-radius: 5px;
-        font-size: 2vw;
+        font-size: 1.5vw;
         background: rgba(255, 255, 255, 0.7);
         height: fit-content;
         width: fit-content;
@@ -261,14 +261,14 @@ header {
         text-decoration: none; }
         #jumbotron #portfolio-slide #overlay .overlay-buttons:hover {
           color: #87FF0F; }
-        @media (max-width: 650px) {
+        @media (max-width: 866.66667px) {
           #jumbotron #portfolio-slide #overlay .overlay-buttons {
             font-size: 13px; } }
-        @media (min-width: 900px) {
+        @media (min-width: 1200px) {
           #jumbotron #portfolio-slide #overlay .overlay-buttons {
             font-size: 18px; } }
       #jumbotron #portfolio-slide #overlay #project-description {
-        font-size: 2vw;
+        font-size: 1.5vw;
         border: 2px solid white;
         border-radius: 5px;
         background: rgba(255, 255, 255, 0.7);
@@ -277,10 +277,10 @@ header {
         margin-bottom: 2%;
         max-width: 80%;
         padding: 1%; }
-        @media (max-width: 650px) {
+        @media (max-width: 866.66667px) {
           #jumbotron #portfolio-slide #overlay #project-description {
             font-size: 13px; } }
-        @media (min-width: 900px) {
+        @media (min-width: 1200px) {
           #jumbotron #portfolio-slide #overlay #project-description {
             font-size: 18px; } }
 

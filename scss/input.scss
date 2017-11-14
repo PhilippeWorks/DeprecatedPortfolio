@@ -183,7 +183,7 @@ header {
 					@extend #portfolio-slide-title;
 					@include clicking();
 					@include border(white);
-					@include responsive-font(2vw, 13px, 18px, $fallback: false);
+					@include responsive-font(1.5vw, 13px, 18px, $fallback: false);
 					background: rgba(255, 255, 255, 0.7);
 					height: fit-content;
 					width: fit-content;
@@ -193,7 +193,7 @@ header {
 				}
 
 				#project-description {
-					@include responsive-font(2vw, 13px, 18px, $fallback: false);
+					@include responsive-font(1.5vw, 13px, 18px, $fallback: false);
 					@include border(white);
 					background: rgba(255, 255, 255, 0.7);
 					height: fit-content;
