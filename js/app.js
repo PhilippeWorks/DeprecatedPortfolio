@@ -75,3 +75,5 @@ class navButton {
 // new navButton($("#contact-link"), $("#contact-page"));
 new navButton($("#about-button"), $("#about"));
 new navButton($(".b2-portfolio"), $("#jumbotron"));
+
+//overlay height

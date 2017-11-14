@@ -24,6 +24,7 @@ body {
 header {
 	@include flex(column);
 	height: 15%;
+	position: relative;
 
 	#top-half-header {
 		@include flex(row);
@@ -80,6 +81,9 @@ header {
 		padding-right: 7%;
 		padding-left: 7%;
 		background: rgba(255, 255, 255, 0.7);
+		position: absolute;
+		width: 100%;
+		bottom: 0;
 
 		.b2-portfolio {
 		@include clicking();
