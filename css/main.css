@@ -11,7 +11,8 @@ html {
 
 body {
   height: 100vh;
-  max-height: 975px; }
+  max-height: 975px;
+  min-height: 745px; }
 
 header {
   display: flex;
@@ -77,15 +78,15 @@ header {
   header .header-tags {
     text-align: left; }
   header #title {
-    font-size: 2.5vw;
+    font-size: 2vw;
     padding-top: 1.5vh;
     color: #077187; }
-    @media (max-width: 680px) {
+    @media (max-width: 850px) {
       header #title {
         font-size: 17px; } }
-    @media (min-width: 1280px) {
+    @media (min-width: 1250px) {
       header #title {
-        font-size: 32px; } }
+        font-size: 25px; } }
   header #subtitle {
     font-size: 2vw;
     padding-top: 1vh;
@@ -94,9 +95,9 @@ header {
     @media (max-width: 650px) {
       header #subtitle {
         font-size: 13px; } }
-    @media (min-width: 1200px) {
+    @media (min-width: 1000px) {
       header #subtitle {
-        font-size: 24px; } }
+        font-size: 20px; } }
   header .media-buttons {
     display: flex;
     display: -ms-flexbox;
@@ -162,7 +163,9 @@ header {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   height: 100%;
-  padding: 5% 2% 5% 2%; }
+  overflow-y: scroll; }
+  #jumbotron .desktop-slide {
+    margin: 2%; }
   #jumbotron #portfolio-slide {
     display: flex;
     display: -ms-flexbox;
@@ -171,10 +174,10 @@ header {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-flex-basis: 85%;
-    -moz-flex-basis: 85%;
-    -ms-flex-basis: 85%;
-    flex-basis: 85%;
+    -webkit-flex-basis: 40%;
+    -moz-flex-basis: 40%;
+    -ms-flex-basis: 40%;
+    flex-basis: 40%;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     -ms-justify-content: center;
@@ -183,21 +186,20 @@ header {
     position: relative;
     max-height: 100%;
     overflow: hidden;
-    margin-bottom: 1%; }
+    min-width: 300px; }
     #jumbotron #portfolio-slide #portfolio-slide-title, #jumbotron #portfolio-slide #overlay .overlay-buttons {
-      font-size: 2vw;
+      font-size: 1.4vw;
       color: #63768D;
       text-align: center;
       padding: 1%; }
-      @media (max-width: 700px) {
+      @media (max-width: 1000px) {
         #jumbotron #portfolio-slide #portfolio-slide-title, #jumbotron #portfolio-slide #overlay .overlay-buttons {
           font-size: 14px; } }
-      @media (min-width: 1100px) {
+      @media (min-width: 1285.71429px) {
         #jumbotron #portfolio-slide #portfolio-slide-title, #jumbotron #portfolio-slide #overlay .overlay-buttons {
-          font-size: 22px; } }
+          font-size: 18px; } }
     #jumbotron #portfolio-slide #overlay-container {
-      position: inherit;
-      max-height: 600px; }
+      position: inherit; }
     #jumbotron #portfolio-slide #portfolio-img {
       display: flex;
       display: -ms-flexbox;
@@ -209,7 +211,6 @@ header {
       border: 2px solid white;
       border-radius: 5px;
       width: 100%;
-      max-height: 600px;
       transition: .5s ease; }
       #jumbotron #portfolio-slide #portfolio-img:hover {
         opacity: 0.3; }
@@ -278,17 +279,6 @@ header {
         @media (min-width: 900px) {
           #jumbotron #portfolio-slide #overlay #project-description {
             font-size: 18px; } }
-  #jumbotron #left-arrow, #jumbotron #right-arrow {
-    cursor: pointer;
-    height: fit-content;
-    font-size: 5vh;
-    border: none;
-    margin-right: auto; }
-    #jumbotron #left-arrow:hover, #jumbotron #right-arrow:hover {
-      color: #87FF0F; }
-  #jumbotron #right-arrow {
-    margin-left: auto;
-    margin-right: 0; }
 
 #contact-page, #about {
   -webkit-justify-content: center;

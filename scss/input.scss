@@ -17,6 +17,7 @@ body {
 	height: 100vh;
 	//ensures consistent experience
 	max-height: 975px;
+	min-height: 745px;
 }
 
 
@@ -60,13 +61,13 @@ header {
 	}
 
 	#title {
-		@include responsive-font(2.5vw, 17px, 32px, $fallback: false);
+		@include responsive-font(2vw, 17px, 25px, $fallback: false);
 		padding-top: 1.5vh;
 		color: $metallic-seaweed;
 	}
 
 	#subtitle {
-		@include responsive-font(2vw, 13px, 24px , $fallback: false);
+		@include responsive-font(2vw, 13px, 20px , $fallback: false);
 		padding-top: 1vh;
 		padding-bottom: 2vh;
 		color: $cambridge-blue;
@@ -116,20 +117,24 @@ header {
 	@include justify-content(center);
 	@include flex-wrap(wrap);
 	height: 100%;
-	padding: 5% 2% 5% 2%;
+	overflow-y: scroll;
+
+		.desktop-slide {
+			margin: 2%;
+		}
 
 		#portfolio-slide {
 			@include flex(column);
-			@include flex-basis(85%);
+			@include flex-basis(40%);
 			@include justify-content(center);
 			position: relative;
 			max-height: 100%;
 			overflow: hidden;
-			margin-bottom: 1%;
+			min-width: 300px;
 
  			#portfolio-slide-title {
 
-				@include responsive-font(2vw, 14px, 22px, $fallback: false);
+				@include responsive-font(1.4vw, 14px, 18px, $fallback: false);
 				color: $tiffany-blue;
 				text-align: center;
 				padding: 1%;
@@ -137,7 +142,6 @@ header {
 
 			#overlay-container {
 				position: inherit;
-				max-height: 600px;
 			}
 
 			#portfolio-img {
@@ -145,7 +149,6 @@ header {
 				@include border(white);
 				// @include flex-basis(75%);
 				width: 100%;
-				max-height: 600px;
 				transition: .5s ease;
 
 				&:hover {
@@ -196,21 +199,6 @@ header {
 					padding: 1%;
 				}	 			    								  
 			}
-		}
-
-
-		#left-arrow {
-			@include clicking();
-			height: fit-content;
- 			font-size: 5vh;
-			border: none;
-			margin-right: auto; 
-			}
-
-		#right-arrow {
-			@extend #left-arrow;
-			margin-left: auto;
-			margin-right: 0;
 		}
 }
 

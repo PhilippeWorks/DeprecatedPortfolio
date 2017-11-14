@@ -1,15 +1,15 @@
  //using enquire.js for media queries
 
-enquire.register("all and (max-width: 600px), all and (max-device-width: 600px)", {
+//for smaller screens, mobile and tablet
+enquire.register("all and (max-width: 700px)", {
 
     // OPTIONAL
     // If supplied, triggered when a media query matches.
     match : function() {
     	projects.forEach((element, index) => {
-    		if (index != counter) {
-    			//creates new figure for each unshown project
+    			//creates new figure for each project
     			$("#jumbotron").append("<figure id=\"portfolio-slide\" class=\"mobile-slide\"><figcaption id=\"portfolio-slide-title\">"+ projects[index].title +"</figcaption><img id=\"portfolio-img\" src=\""+ projects[index].src +"\" alt=\""+ projects[index].title +"\"><div id=\"overlay\"><p id=\"project-description\">"+ projects[index].description +"</p><a id=\"website-link\" class=\"overlay-buttons\" target=\"_blank\" href=\""+ projects[index].url +"\">go to website</a><a id=\"source-code-link\" class=\"overlay-buttons\" target=\"_blank\" href=\""+ projects[index].srcUrl +"\">view source code</a></div></figure>")
-    		}
+    		
     	});
 
         //adds margins to get rid of header and footer overlap on content
@@ -44,6 +44,7 @@ enquire.register("all and (max-width: 600px), all and (max-device-width: 600px)"
 
 });
 
+// centers site on oversized screens
 enquire.register("screen and (min-height: 975px)", {
 
     // OPTIONAL
@@ -62,6 +63,43 @@ enquire.register("screen and (min-height: 975px)", {
     unmatch : function() {
         //removes created DOM elements by selecting shared class name
         $("html").css("margin-top", "0");
+    },
+
+
+    // OPTIONAL
+    // If supplied, triggered once, when the handler is registered.
+    setup : function() {},
+
+    // OPTIONAL, defaults to false
+    // If set to true, defers execution of the setup function
+    // until the first time the media query is matched
+    deferSetup : true,
+
+    // OPTIONAL
+    // If supplied, triggered when handler is unregistered.
+    // Place cleanup code here
+    destroy : function() {}
+
+});
+
+//builds out desktop version
+enquire.register("all and (min-width: 701px)", {
+
+    // OPTIONAL
+    // If supplied, triggered when a media query matches.
+    match : function() {
+        projects.forEach((element, index) => {
+                //creates new figure for each project
+                $("#jumbotron").append("<figure id=\"portfolio-slide\" class=\"desktop-slide\"><figcaption id=\"portfolio-slide-title\">"+ projects[index].title +"</figcaption><img id=\"portfolio-img\" src=\""+ projects[index].src +"\" alt=\""+ projects[index].title +"\"><div id=\"overlay\"><p id=\"project-description\">"+ projects[index].description +"</p><a id=\"website-link\" class=\"overlay-buttons\" target=\"_blank\" href=\""+ projects[index].url +"\">go to website</a><a id=\"source-code-link\" class=\"overlay-buttons\" target=\"_blank\" href=\""+ projects[index].srcUrl +"\">view source code</a></div></figure>")
+            
+        });
+    },
+
+    // OPTIONAL
+    // If supplied, triggered when the media query transitions
+    // *from a matched state to an unmatched state*.
+    unmatch : function() {
+        $(".desktop-slide").remove();
     },
 
 

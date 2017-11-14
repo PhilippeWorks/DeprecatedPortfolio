@@ -27,55 +27,16 @@ let projects = [
 		description: "Have a look at the online version of my resume. jQuery is at the core of this project.",
 		url:"projects/online-resume/index.html",
 		srcUrl: "https://github.com/PhilippeWorks/Online-Resume"
+	},
+	{
+		title: "Website Optimization",
+		src: "imgs/website-optimization.png",
+		description: "Initial score was 71, final score = 94! Page speed achieved by optimizing image sizes and using Grunt.",
+		url: "projects/website-optimization/index.html",
+		srcUrl: "https://github.com/PhilippeWorks/gruntdemo-optimization"
 	}
 ];
 
-//fills in portfolio slide
-let counter = 0;
-let slideMaker = (slide) => {
-	$("#portfolio-slide-title").html(projects[slide].title);
-	$("#portfolio-img").attr("src", projects[slide].src);
-	$("#portfolio-img").attr("alt", projects[slide].title);
-	$("#project-description").html(projects[slide].description);
-	$("#source-code-link").attr("href", projects[slide].srcUrl);
-	$("#website-link").attr("href", projects[slide].url);
-	};
-
-slideMaker(counter);
-
-
-//right arrow button
-$("#right-arrow").click( () => {
-	$("#portfolio-slide").fadeOut(400);
-	window.setTimeout( () => {
-		counter++;	
-		if (counter < projects.length) {
-			slideMaker(counter);
-		} else if (counter === projects.length) {
-			counter = 0;
-			slideMaker(counter);
-		}
-	}, 400);
-	//gives space for fadeout to finish before generating next slide
-	window.setTimeout( () => {$("#portfolio-slide").fadeIn(400);}, 500);
-});
-
-//left arrow button
-$("#left-arrow").click( () => {
-	$("#portfolio-slide").fadeOut(400);
-	window.setTimeout( () => {
-		counter--;	
-		if (counter < projects.length) {
-			slideMaker(counter);
-		} else if (counter === projects.length) {
-			counter = 0;
-			slideMaker(counter);
-		}
-	}, 400);
-
-	//gives space for fadeout to finish before generating next slide
-	window.setTimeout( () => {$("#portfolio-slide").fadeIn(400);}, 500);
-});
 
 //nav bar controls
 let navBar = [];

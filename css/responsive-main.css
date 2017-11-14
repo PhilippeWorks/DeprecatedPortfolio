@@ -1,4 +1,4 @@
-@media all and (max-width: 600px), all and (max-device-width: 500px) {
+@media all and (max-width: 700px) {
   body {
     max-height: none;
     width: 100%; }
@@ -123,26 +123,26 @@
         -ms-flex-direction: row;
         flex-direction: row;
         text-decoration: none; } }
-      @media all and (max-width: 600px) and (max-width: 933.33333px), all and (max-device-width: 500px) and (max-width: 933.33333px) {
+      @media all and (max-width: 700px) and (max-width: 933.33333px) {
         footer #footer-info div {
           font-size: 14px; } }
-      @media all and (max-width: 600px) and (min-width: 1600px), all and (max-device-width: 500px) and (min-width: 1600px) {
+      @media all and (max-width: 700px) and (min-width: 1600px) {
         footer #footer-info div {
           font-size: 24px; } }
 
-@media all and (max-width: 600px), all and (max-device-width: 500px) {
+@media all and (max-width: 700px) {
         footer #footer-info div a {
           color: #077187;
           padding: 0 9px 0 9px; }
     footer .footer-notes {
       font-size: 1.5vw; } }
-    @media all and (max-width: 600px) and (max-width: 933.33333px), all and (max-device-width: 500px) and (max-width: 933.33333px) {
+    @media all and (max-width: 700px) and (max-width: 933.33333px) {
       footer .footer-notes {
         font-size: 14px; } }
-    @media all and (max-width: 600px) and (min-width: 1600px), all and (max-device-width: 500px) and (min-width: 1600px) {
+    @media all and (max-width: 700px) and (min-width: 1600px) {
       footer .footer-notes {
         font-size: 24px; } }
 
-@media all and (max-width: 600px), all and (max-device-width: 500px) {
+@media all and (max-width: 700px) {
     footer #footer-city {
       display: none; } }
