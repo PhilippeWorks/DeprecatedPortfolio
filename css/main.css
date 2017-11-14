@@ -169,7 +169,7 @@ header {
   height: 100%;
   overflow-y: scroll; }
   #jumbotron .desktop-slide {
-    margin: 2%; }
+    margin: 2.5%; }
   #jumbotron #portfolio-slide {
     display: flex;
     display: -ms-flexbox;
@@ -246,7 +246,7 @@ header {
       opacity: 0;
       background: rgba(255, 255, 255, 0); }
       #jumbotron #portfolio-slide #overlay:hover {
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(200, 200, 200, 0.7);
         opacity: 1; }
       #jumbotron #portfolio-slide #overlay .overlay-buttons {
         cursor: pointer;
