@@ -15,9 +15,9 @@ let projects = [
 		srcUrl: "https://github.com/PhilippeWorks/Neighborhood-Directory"
 	},
 	{
-		title: "Random-Quote Generator",
+		title: "Random Quote Generator",
 		src: "imgs/quote-machine.png",
-		description: "Share these cool quotes on social media. Using the facebook and twitter API for share buttons.",
+		description: "Take in these cool quotes.",
 		url:"projects/random-quote-generator/index.html",
 		srcUrl: "https://github.com/PhilippeWorks/Quote-Machine"
 	},
