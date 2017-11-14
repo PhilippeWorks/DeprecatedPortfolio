@@ -13,7 +13,7 @@ enquire.register("all and (max-width: 700px)", {
     	});
 
         //adds margins to get rid of header and footer overlap on content
-        $("body").css("margin-top", $("header").css("height"));
+        $("body").css("margin-top", $("header").css("height" + 6));
         $("#jumbotron").css("margin-bottom", $("footer").css("height"));
     },
 
